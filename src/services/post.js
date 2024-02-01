@@ -106,6 +106,7 @@ export const getPostsLimitService = (page,districtId, { limitPost, order, ...que
                  }
            }
         }
+
         const whereCondition = isAccept !== ''  ? { isAccept: isAccept } : {};
 
         const response = await db.Post.findAndCountAll({

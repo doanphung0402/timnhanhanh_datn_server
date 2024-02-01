@@ -359,7 +359,7 @@ export const getDashboard = asyncHandler(async (req, res) => {
     // Só lượng bài đăng
     const { days, type, from, to } = req.query
     const daysQuery = days || 220
-    const typeDate = type === 'month' ? '%m-%y' : '%d-%m-%y'
+    const typeDate = type === 'month' ?  'MM-YY' : 'DD-MM-YY'
     const start = from || Date.now() - daysQuery * 24 * 60 * 60 * 1000
     const end = to || Date.now()
     const q = {}
