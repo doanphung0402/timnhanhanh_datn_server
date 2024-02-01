@@ -82,7 +82,6 @@ export const getPostById = (pid) => new Promise(async (resolve, reject) => {
     }
 })
 export const getPostsLimitService = (page,districtId, { limitPost, order, ...query }, { priceNumber, areaNumber },customTime,isAccept) => new Promise(async (resolve, reject) => {
-    console.log("🚀 ~ getPostsLimitService ~ isAccept:", isAccept)
     if (isAccept === undefined) isAccept =true 
     try {
         let offset = (!page || +page < 0) ? 0 : (page-1)
